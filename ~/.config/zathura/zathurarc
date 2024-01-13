@@ -1,0 +1,38 @@
+set notification-error-bg "#181818"
+set notification-error-fg "#e05050"
+
+set notification-warning-bg "#181818"
+set notification-warning-fg "#e0c010"
+
+set notification-bg "#181818"
+set notification-fg "#70c050"
+
+set completion-bg               "#605040"
+set completion-fg               "#f0e0d0"
+set completion-group-bg         "#605040"
+set completion-group-fg         "#f0e0d0"
+set completion-highlight-bg     "#30a0f0"
+set completion-highlight-fg     "#605040"
+
+set inputbar-bg                 "#181818"
+set inputbar-fg                 "#f0e0d0"
+
+set statusbar-bg    "#181818"
+set statusbar-fg    "#f0e0d0"
+
+set highlight-color         "#e0c010"
+set highlight-active-color  "#e05050"
+
+set default-bg  "#181818"
+set default-fg  "#f0e0d0"
+
+set render-loading  true
+set render-loading-bg   "#181818"
+set render-loading-fg   "#f0e0d0"
+
+set recolor-lightcolor  "#181818"
+set recolor-darkcolor   "#f0e0d0"
+set recolor false
+
+set font "Iosevka Nerd Font"
+map ; goto

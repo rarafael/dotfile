@@ -1,0 +1,3 @@
+#!/bin/sh
+
+bemenu-run -l 12 -p "" -c -W 0.3 --fn "Iosevka Nerd Font 12" --nb "#181818" --nf "#f0e0d0" --sb "#181818" --sf "#d01f20" --ab "#181818" --tb "#181818" --tf "#d01f20" --cf "#ffe0c0" --hf "#d01f20"

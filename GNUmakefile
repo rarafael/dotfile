@@ -33,11 +33,31 @@ wallpaper: ~/.local/share/wallpaper.png
 all += doasedit
 doasedit: ~/.local/bin/doasedit
 
+all += menu
+menu: ~/.local/bin/menu
+
+all += zathura
+zathura: ~/.config/zathura/zathurarc
+
+all += gdb
+gdb: ~/.gdbinit
+
+## WAYLAND ##
+
+wayland += sway
+sway: ~/.config/sway/config
+
+wayland += waybar
+waybar: ~/.config/waybar/config ~/.config/waybar/style.css
+
+## XORG	##
+
 xorg += xscreenshot
 xscreenshot: ~/.local/bin/screenshot
 
 all: $(all)
 xorg: $(xorg)
+wayland: $(wayland)
 
 force:
 .PHONY: all $(all)

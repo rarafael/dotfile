@@ -43,4 +43,5 @@ alias emacs='emacs -nw'
 alias icat='kitty +kitten icat'
 alias yt-dlp-music='yt-dlp -x --embed-metadata --embed-thumbnail --parse-metadata ":(?P<meta_comment>)" --audio-format m4a -o "%(title)s.%(ext)s"'
 alias open="xdg-open"
+alias tree="tree -C"
 source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh

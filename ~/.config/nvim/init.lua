@@ -25,6 +25,8 @@ vim.opt.wildmenu = true
 vim.opt.inccommand = 'split'
 vim.opt.clipboard:append('unnamedplus')
 vim.opt.expandtab = true
+vim.opt.tw = 120
+vim.opt.fo:append('a')
 
 ----------------------------
 -- Autocmds and Functions --
@@ -88,6 +90,7 @@ require('lazy').setup({
     'terrortylor/nvim-comment',
     'ap/vim-css-color',
     'terryma/vim-multiple-cursors',
+    'neovim/nvim-lspconfig',
 
     'editorconfig/editorconfig-vim',
     'dubek/vim-mal',
@@ -105,6 +108,23 @@ vim.cmd [[
     colorscheme srcery
     filetype plugin indent on
 ]]
+
+require('lspconfig').cmake.setup{}
+require('lspconfig').clangd.setup {
+    settings = {
+        filetypes = 'cpp'
+    }
+}
+vim.api.nvim_create_autocmd("BufWritePre", {
+    group = "vimrc-textfiles",
+    pattern = "*.cxx",
+    command = "lua vim.lsp.buf.format()",
+})
+vim.api.nvim_create_autocmd("BufWritePre", {
+    group = "vimrc-textfiles",
+    pattern = "*.hxx",
+    command = "lua vim.lsp.buf.format()",
+})
 
 require('lualine').setup {
   options = { icons_enabled = true, theme = 'srcery',
@@ -125,9 +145,9 @@ require('lualine').setup {
 
 require('nvim_comment').setup({ comment_empty = false, })
 
-require'nvim-treesitter.configs'.setup {
+require('nvim-treesitter.configs').setup({
     highlight = { enable = true, additional_vim_regex_highlighting = false, },
-}
+})
 
 vim.g.srcery_italic = 1
 vim.g.blamer_show_in_insert_mods = 0
@@ -205,6 +225,12 @@ noremap('n', "<A-h>", "<C-w>h")
 noremap('n', "<A-j>", "<C-w>j")
 noremap('n', "<A-k>", "<C-w>k")
 noremap('n', "<A-l>", "<C-w>l")
+
+noremap('n', "<A-1>", "gt1<CR>")
+noremap('n', "<A-2>", "gt2<CR>")
+noremap('n', "<A-3>", "gt3<CR>")
+noremap('n', "<A-4>", "gt4<CR>")
+noremap('n', "<A-5>", "gt5<CR>")
 
 -- Fix Ctrl-H backspace thing
 noremap({'x', 't', 'i', 'n', 'v'} , "", "<BS>")

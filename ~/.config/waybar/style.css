@@ -1,0 +1,48 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Iosevka Nerd Font";
+    font-stretch: condensed;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #181818;
+    border-bottom: 4px solid #181818;
+    color: #f0e0d0;
+}
+
+tooltip {
+    background: #181818;
+    border: 1px solid #f0e0d0;
+}
+
+tooltip label {
+    color: #f0e0d0;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: #f0e0d0;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button.focused {
+    background: #605040;
+    border-bottom: 3px solid #f0e0d0;
+}
+
+#mode, #clock, #network, #pulseaudio, #tray, #mpd {
+    padding: 0 10px;
+}
+
+#custom-weather {
+    padding: 0 0;
+}
+
+#mode {
+    background: #ffe0c0;
+    border-bottom: 3px solid white;
+}
